@@ -10,7 +10,10 @@ function Contact() {
     e.preventDefault();
     setStatus('sending');
     try {
-      const res = await fetch('http://localhost:5000/api/contact', {
+      const apiUrl = import.meta.env.DEV
+        ? 'http://localhost:5000/api/contact'
+        : '/api/contact';
+      const res = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
