@@ -1,71 +1,16 @@
-# Tisha Lathwal — Portfolio (MERN Stack)
+# React + Vite
 
-A personal portfolio website built with the MERN stack — React on the frontend, Express and MongoDB on the backend to handle contact form submissions.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## Live Demo
-[tishalathwalportfolio.netlify.app](https://tishalathwalportfolio.netlify.app)
+Currently, two official plugins are available:
 
-## Tech Stack
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-**Frontend**
-- React (Vite)
-- Tailwind CSS
-- Dark mode support
+## React Compiler
 
-**Backend**
-- Node.js
-- Express.js
-- MongoDB (Mongoose)
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Features
-- Responsive design with dark/light mode toggle
-- Scroll-reveal animations
-- Services, Projects, About, Certifications, and Contact sections
-- Contact form connected to a MongoDB database via a REST API
+## Expanding the Oxlint configuration
 
-## Project Structure
-
-```
-portfolio-mern-v2/
-├── client/          # React frontend
-│   └── src/
-│       ├── components/
-│       └── hooks/
-└── server/          # Express backend
-    ├── models/
-    ├── controllers/
-    └── routes/
-```
-
-## Getting Started
-
-### Backend Setup
-```bash
-cd server
-npm install
-```
-
-Create a `.env` file (based on `.env.example`) and add your MongoDB connection string:
-```
-MONGO_URI=your_mongodb_connection_string
-PORT=5000
-```
-
-Run the server:
-```bash
-node server.js
-```
-
-### Frontend Setup
-```bash
-cd client
-npm install
-npm run dev
-```
-
-The app will be available at `http://localhost:5173`.
-
-## Contact
-- Email: tishalathwal55@gmail.com
-- LinkedIn: [linkedin.com/in/tisha-lathwal](https://www.linkedin.com/in/tisha-lathwal)
-- GitHub: [github.com/Tishalathwal](https://github.com/Tishalathwal)
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
