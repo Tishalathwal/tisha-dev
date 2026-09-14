@@ -17,7 +17,7 @@ const projects = [
     desc: 'personal portfolio built with the MERN stack — React and Tailwind CSS on the frontend, Express and MongoDB on the backend to handle contact form submissions.',
     tags: ['React', 'Vite', 'Tailwind CSS'],
     github: 'https://github.com/Tishalathwal/tisha-dev',
-    live: 'https://tishalathwalportfolio.netlify.app',
+    live: 'https://tisha-dev.vercel.app/',
   },
   {
     title: 'Spydy — Desktop Pet App',
