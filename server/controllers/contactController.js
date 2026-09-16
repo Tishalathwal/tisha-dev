@@ -8,12 +8,15 @@ const createContact = async (req, res) => {
       return res.status(400).json({ error: 'All fields are required' });
     }
 
+    console.log('Attempting to save contact:', name, email);
     const contact = new Contact({ name, email, message });
     await contact.save();
+    console.log('Contact saved successfully:', contact._id);
 
     res.status(201).json({ message: 'Message sent successfully', contact });
   } catch (err) {
-    res.status(500).json({ error: 'Something went wrong' });
+    console.error('Save error:', err.message);
+    res.status(500).json({ error: 'Something went wrong', detail: err.message });
   }
 };
 

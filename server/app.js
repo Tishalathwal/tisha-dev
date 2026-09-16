@@ -5,6 +5,8 @@ require('dotenv').config();
 
 const contactRoutes = require('./routes/contactRoutes');
 
+mongoose.set('bufferCommands', false);
+
 const app = express();
 
 app.use(cors());
@@ -13,9 +15,11 @@ app.use(express.json());
 let isConnected = false;
 
 const connectDB = async () => {
-  if (isConnected) return;
+  if (isConnected && mongoose.connection.readyState === 1) return;
   await mongoose.connect(process.env.MONGO_URI, {
     serverSelectionTimeoutMS: 8000,
+    socketTimeoutMS: 10000,
+    connectTimeoutMS: 8000,
   });
   isConnected = true;
   console.log('MongoDB connected');
