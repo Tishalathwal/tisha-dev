@@ -14,7 +14,9 @@ let isConnected = false;
 
 const connectDB = async () => {
   if (isConnected) return;
-  await mongoose.connect(process.env.MONGO_URI);
+  await mongoose.connect(process.env.MONGO_URI, {
+    serverSelectionTimeoutMS: 8000,
+  });
   isConnected = true;
   console.log('MongoDB connected');
 };
@@ -24,7 +26,8 @@ app.use(async (req, res, next) => {
     await connectDB();
     next();
   } catch (err) {
-    res.status(500).json({ error: 'Database connection failed' });
+    console.error('DB connection error:', err.message);
+    res.status(500).json({ error: 'Database connection failed', detail: err.message });
   }
 });
 
