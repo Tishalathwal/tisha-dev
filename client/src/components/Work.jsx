@@ -29,7 +29,7 @@ const projects = [
 
 function Work() {
   return (
-    <section id="work" className="py-24">
+    <section id="work" className="py-15">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-14">
           <p className="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">My work</p>

@@ -5,7 +5,7 @@ const skills = [
 
 function About() {
   return (
-    <section id="about" className="py-24 bg-zinc-50 dark:bg-zinc-900/40">
+    <section id="about" className="py-15 bg-zinc-50 dark:bg-zinc-900/40">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="reveal order-2 md:order-1">

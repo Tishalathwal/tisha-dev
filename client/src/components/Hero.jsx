@@ -14,9 +14,8 @@ function Hero() {
               Hi, I'm <span className="text-accent">Tisha Lathwal</span>
             </h1>
             <p className="reveal d2 text-lg md:text-xl text-zinc-500 dark:text-zinc-400 font-light leading-relaxed max-w-md mb-10">
-              Full Stack{' '}
               <strong className="font-medium text-zinc-700 dark:text-zinc-300">
-                Developer &amp; Software Engineer
+              Full Stack Developer &amp; Software Engineer
               </strong>
               . I love building fast, clean, and accessible web apps. From
               sleek frontends to solid backend systems — I turn ideas into

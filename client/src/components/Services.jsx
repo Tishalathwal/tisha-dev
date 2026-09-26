@@ -30,7 +30,7 @@ const services = [
 
 function Services() {
   return (
-    <section id="services" className="py-24 bg-zinc-50 dark:bg-zinc-900/40">
+    <section id="services" className="py-15 bg-zinc-50 dark:bg-zinc-900/40">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-14">
           <p className="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">What I do</p>

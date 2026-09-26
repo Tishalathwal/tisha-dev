@@ -3,6 +3,7 @@ import useDarkMode from '../hooks/useDarkMode';
 
 const links = [
   { id: 'services', label: 'Services' },
+  { id: 'experience', label: 'Experience' },
   { id: 'work', label: 'Work' },
   { id: 'about', label: 'About' },
   { id: 'certifications', label: 'Certifications' },
@@ -35,8 +36,8 @@ function Navbar() {
         <ul className="hidden md:flex items-center gap-8 text-sm">
           {links.map((l) => (
             <li key={l.id}>
-              <a
-                href={`#${l.id}`}
+              
+                <a href={`#${l.id}`}
                 className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
               >
                 {l.label}
@@ -62,8 +63,19 @@ function Navbar() {
             )}
           </button>
 
-          <a
-            href="#contact"
+          
+            <a href="/resume.pdf"
+            download
+            className="hidden md:inline-flex items-center gap-2 border border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 text-sm font-medium px-5 py-2 rounded-full hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors"
+          >
+            Resume
+            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1M7 10l5 5 5-5M12 15V3" />
+            </svg>
+          </a>
+
+          
+            <a href="#contact"
             className="hidden md:inline-flex items-center gap-2 shimmer bg-accent text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-accent-light transition-colors"
           >
             Hire me
@@ -105,9 +117,19 @@ function Navbar() {
                 </a>
               </li>
             ))}
+            <li>
+              
+                <a href="/resume.pdf"
+                download
+                onClick={() => setMobileOpen(false)}
+                className="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors"
+              >
+                Resume
+              </a>
+            </li>
             <li className="pt-2 border-t border-zinc-100 dark:border-zinc-900">
-              <a
-                href="#contact"
+              
+                <a href="#contact"
                 onClick={() => setMobileOpen(false)}
                 className="inline-flex shimmer bg-accent text-white font-medium text-sm px-5 py-2.5 rounded-full"
               >
