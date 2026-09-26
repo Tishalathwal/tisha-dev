@@ -3,7 +3,7 @@
 A personal portfolio website built with the MERN stack — React on the frontend, Express and MongoDB on the backend to handle contact form submissions.
 
 ## Live Demo
-[tishalathwalportfolio.netlify.app](https://tishalathwalportfolio.netlify.app)
+[https://tisha-dev.vercel.app/](https://tisha-dev.vercel.app/)
 
 ## Tech Stack
 
